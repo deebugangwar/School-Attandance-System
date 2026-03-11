@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Manual Attendance</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+<h1>Student Attendance System</h1>
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+<th>Name</th>
+<th>Roll</th>
+<th>Present</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<button onclick="saveAttendance()">Save Attendance</button>
+
+<button onclick="loadAttendance()">View Attendance</button>
+
+<button onclick="downloadCSV()">Download CSV</button>
+
+<div id="status"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
