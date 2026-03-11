@@ -195,12 +195,5 @@ def download_csv():
     return "No File"
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     app.run(debug=True)
-    
-
-
-
-
-
-
