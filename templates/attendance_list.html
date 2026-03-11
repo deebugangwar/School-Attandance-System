@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Attendance List</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+<h2>Today Attendance</h2>
+
+<table id="todayTable">
+
+<thead>
+
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+
+<h2>Total Attendance</h2>
+
+<table id="totalTable">
+
+<thead>
+
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<a href="/">
+<button>Back Home</button>
+</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

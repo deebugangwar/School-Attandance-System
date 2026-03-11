@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance Percentage</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+<h2>Attendance Percentage</h2>
+
+<table id="percentageTable">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Percentage</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<a href="/">
+<button>Back Home</button>
+</a>
+
+</div>
+
+<script>
+
+async function loadPercentage(){
+
+let res = await fetch("/percentage")
+
+let data = await res.json()
+
+let table = document.querySelector("#percentageTable tbody")
+
+table.innerHTML=""
+
+data.percentage.forEach(p=>{
+
+let row=`
+<tr>
+<td>${p[0]}</td>
+<td>${p[1]}%</td>
+</tr>
+`
+
+table.innerHTML+=row
+
+})
+
+}
+
+loadPercentage()
+
+</script>
+
+</body>
+</html>

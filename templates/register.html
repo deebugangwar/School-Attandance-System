@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Register Student</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+<h2>Register Student</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="roll" placeholder="Enter Roll">
+
+<button onclick="registerStudent()">Register</button>
+
+<div id="status"></div>
+
+<a href="/">
+<button>Back Home</button>
+</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
